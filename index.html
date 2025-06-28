@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Story Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>✨ AI Story Generator</h1>
+            <p>Create amazing stories with the power of AI</p>
+        </div>
+
+        <!-- Setup Instructions -->
+        <div class="api-config">
+            <h3>🔧 Setup Instructions</h3>
+            <p>To use this generator, you'll need to add your API key. Currently supports:</p>
+            <p><strong>OpenAI:</strong> Get your API key from <code>platform.openai.com</code></p>
+            <p><strong>Hugging Face:</strong> Get your API key from <code>huggingface.co/settings/tokens</code></p>
+            <p>Add your API key in the JavaScript file</p>
+        </div>
+
+        <!-- Story Prompt Input -->
+        <div class="form-group">
+            <label for="prompt">Story Prompt</label>
+            <input 
+                type="text" 
+                id="prompt" 
+                class="input-field"
+                placeholder="Enter your story idea... (e.g., 'A robot discovers emotions')"
+                maxlength="200"
+            >
+        </div>
+
+        <!-- Genre Selection -->
+        <div class="form-group">
+            <label>Choose Genre</label>
+            <div class="genre-buttons">
+                <button class="genre-btn active" data-genre="adventure">Adventure</button>
+                <button class="genre-btn" data-genre="mystery">Mystery</button>
+                <button class="genre-btn" data-genre="romance">Romance</button>
+                <button class="genre-btn" data-genre="sci-fi">Sci-Fi</button>
+                <button class="genre-btn" data-genre="fantasy">Fantasy</button>
+                <button class="genre-btn" data-genre="horror">Horror</button>
+                <button class="genre-btn" data-genre="comedy">Comedy</button>
+                <button class="genre-btn" data-genre="drama">Drama</button>
+            </div>
+        </div>
+
+        <!-- Story Length Selection -->
+        <div class="form-group">
+            <label for="length">Story Length</label>
+            <select id="length" class="input-field">
+                <option value="short">Short (100-200 words)</option>
+                <option value="medium" selected>Medium (300-500 words)</option>
+                <option value="long">Long (500-800 words)</option>
+            </select>
+        </div>
+
+        <!-- Generate Button -->
+        <button class="generate-btn" onclick="generateStory()">
+            Generate Story ✨
+        </button>
+
+        <!-- Loading Animation -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <span>Crafting your story...</span>
+        </div>
+
+        <!-- Story Output -->
+        <div class="story-output" id="storyOutput">
+            <div class="story-title">Your Generated Story</div>
+            <div class="story-text" id="storyText"></div>
+            <div class="story-actions">
+                <button class="action-btn" onclick="saveStory()">💾 Save Story</button>
+                <button class="action-btn" onclick="copyStory()">📋 Copy Text</button>
+                <button class="action-btn" onclick="shareStory()">🔗 Share</button>
+                <button class="action-btn" onclick="regenerateStory()">🔄 Regenerate</button>
+            </div>
+        </div>
+
+        <!-- Saved Stories Section -->
+        <div class="saved-stories" id="savedStories">
+            <h3>📚 Saved Stories</h3>
+            <div id="savedStoriesList"></div>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
