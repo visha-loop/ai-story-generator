@@ -36,3 +36,7 @@ This repo is for **educational and practice purposes only**.
 Feel free to clone and build on top of it!
 
 ---
+website type screenshort 
+<img width="1470" alt="Screenshot 2025-06-28 at 2 14 54 PM" src="https://github.com/user-attachments/assets/62e2b42e-aa59-40c8-8373-3ed8577b9239" />
+
+<img width="1470" alt="Screenshot 2025-06-28 at 2 15 00 PM" src="https://github.com/user-attachments/assets/7a127e7b-5738-4aec-962f-b056eced64f1" />
